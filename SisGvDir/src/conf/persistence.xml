@@ -3,6 +3,10 @@
   <persistence-unit name="SisGvDirPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>modelo.Vendedor</class>
+    <class>modelo.Telefone</class>
+    <class>modelo.Venda</class>
+    <class>modelo.Item</class>
+    <class>modelo.Produto</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
