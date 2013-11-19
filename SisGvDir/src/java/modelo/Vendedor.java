@@ -5,12 +5,10 @@
 package modelo;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 /**
  *
@@ -18,11 +16,6 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Vendedor implements Serializable {
-    @OneToMany(mappedBy = "vendedor")
-    private List<Venda> vendas;
-    @OneToMany(mappedBy = "<error>")
-    private List<Telefone> telefones;
-    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,11 +25,6 @@ public class Vendedor implements Serializable {
     private String cpf;
     private String nomeEmpresa;
     private String email;
-    private String cidade;
-    private String rua;
-    private String bairro;
-    private String estado;
-    
     
 
     public Long getId() {
@@ -126,90 +114,6 @@ public class Vendedor implements Serializable {
      */
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    /**
-     * @return the cidade
-     */
-    public String getCidade() {
-        return cidade;
-    }
-
-    /**
-     * @param cidade the cidade to set
-     */
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    /**
-     * @return the rua
-     */
-    public String getRua() {
-        return rua;
-    }
-
-    /**
-     * @param rua the rua to set
-     */
-    public void setRua(String rua) {
-        this.rua = rua;
-    }
-
-    /**
-     * @return the bairro
-     */
-    public String getBairro() {
-        return bairro;
-    }
-
-    /**
-     * @param bairro the bairro to set
-     */
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    /**
-     * @return the estado
-     */
-    public String getEstado() {
-        return estado;
-    }
-
-    /**
-     * @param estado the estado to set
-     */
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    /**
-     * @return the telefones
-     */
-    public List<Telefone> getTelefones() {
-        return telefones;
-    }
-
-    /**
-     * @param telefones the telefones to set
-     */
-    public void setTelefones(List<Telefone> telefones) {
-        this.telefones = telefones;
-    }
-
-    /**
-     * @return the vendas
-     */
-    public List<Venda> getVendas() {
-        return vendas;
-    }
-
-    /**
-     * @param vendas the vendas to set
-     */
-    public void setVendas(List<Venda> vendas) {
-        this.vendas = vendas;
     }
     
 }
